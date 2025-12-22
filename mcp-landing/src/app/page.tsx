@@ -1,7 +1,5 @@
 "use client";
 
-import { useState } from 'react';
-
 const structuredData = {
   "@context": "https://schema.org",
   "@graph": [
@@ -59,17 +57,26 @@ const structuredData = {
 };
 
 export default function LandingPage() {
-  const [email, setEmail] = useState('');
-  const [submitted, setSubmitted] = useState(false);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-red-50">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
 
       <header role="banner" className="px-6 py-4">
         <nav aria-label="Navigation principale" className="max-w-6xl mx-auto flex justify-between items-center">
-          <a href="/" title="Accueil - Jérôme Consultant MCP" className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
-            Jérôme.dev
+          <a href="/" title="Accueil - Jérôme Consultant IA" className="flex items-center gap-2">
+            <svg width="40" height="40" viewBox="0 0 100 100" className="rounded-lg">
+              <defs>
+                <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style={{ stopColor: '#f97316' }} />
+                  <stop offset="100%" style={{ stopColor: '#dc2626' }} />
+                </linearGradient>
+              </defs>
+              <rect width="100" height="100" rx="20" fill="url(#logo-grad)" />
+              <text x="50" y="50" dy="0.35em" textAnchor="middle" fontFamily="Inter, system-ui, sans-serif" fontSize="50" fontWeight="700" fill="white">J</text>
+            </svg>
+            <span className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
+              Jérôme.dev
+            </span>
           </a>
           <a href="#contact" title="Réserver une consultation gratuite" className="px-4 py-2 text-orange-700 hover:text-orange-900 font-medium transition-colors">
             Contact
@@ -183,32 +190,32 @@ export default function LandingPage() {
               Prêt à intégrer l&apos;IA dans votre entreprise ?
             </h2>
             <p className="text-gray-600 mb-8">Premier échange de 30 minutes offert. Discutons de votre cas d&apos;usage.</p>
-            {!submitted ? (
-              <div className="flex flex-col sm:flex-row gap-3">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="votre@email.com"
-                  className="flex-1 px-5 py-4 rounded-xl border border-orange-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
-                />
-                <button onClick={() => email && setSubmitted(true)} className="px-8 py-4 font-semibold text-white bg-gradient-to-r from-orange-500 to-red-500 rounded-xl hover:shadow-lg transition-all cursor-pointer">
-                  Réserver →
-                </button>
-              </div>
-            ) : (
-              <div className="p-6 bg-green-50 rounded-xl border border-green-200">
-                <p className="text-green-700 font-medium">✓ Merci ! Je vous recontacte sous 24h.</p>
-              </div>
-            )}
-            <p className="mt-4 text-sm text-gray-500">Vos données restent confidentielles. Pas de spam.</p>
+            <a 
+              href="mailto:desmaresjerome@gmail.com?subject=Demande%20d'audit%20IA&body=Bonjour%20Jérôme,%0A%0AJe%20souhaite%20en%20savoir%20plus%20sur%20vos%20services%20d'optimisation%20IA.%0A%0AMon%20entreprise%20:%0AMon%20besoin%20:%0A%0ACordialement,"
+              className="inline-block px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-orange-500 to-red-500 rounded-xl shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 hover:scale-105 transition-all duration-300"
+            >
+              Demander mon audit gratuit →
+            </a>
+            <p className="mt-6 text-gray-500">ou écrivez-moi directement à <a href="mailto:desmaresjerome@gmail.com" className="text-orange-600 hover:underline">desmaresjerome@gmail.com</a></p>
           </div>
         </section>
       </main>
 
       <footer role="contentinfo" className="px-6 py-8 border-t border-orange-100">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-sm">
-          <span>© 2025 Jérôme — Consultant Intégration IA & Serveur MCP en France</span>
+          <div className="flex items-center gap-2">
+            <svg width="24" height="24" viewBox="0 0 100 100" className="rounded">
+              <defs>
+                <linearGradient id="footer-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style={{ stopColor: '#f97316' }} />
+                  <stop offset="100%" style={{ stopColor: '#dc2626' }} />
+                </linearGradient>
+              </defs>
+              <rect width="100" height="100" rx="20" fill="url(#footer-grad)" />
+              <text x="50" y="50" dy="0.35em" textAnchor="middle" fontFamily="Inter, system-ui, sans-serif" fontSize="50" fontWeight="700" fill="white">J</text>
+            </svg>
+            <span>© 2025 Jérôme — Consultant Optimisation IA en France</span>
+          </div>
           <nav className="flex gap-6">
             <a href="#" className="hover:text-orange-600 transition-colors">LinkedIn</a>
             <a href="#" className="hover:text-orange-600 transition-colors">GitHub</a>
