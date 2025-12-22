@@ -217,9 +217,8 @@ export default function LandingPage() {
             <span>© 2025 Jérôme — Consultant Optimisation IA en France</span>
           </div>
           <nav className="flex gap-6">
-            <a href="#" className="hover:text-orange-600 transition-colors">LinkedIn</a>
-            <a href="#" className="hover:text-orange-600 transition-colors">GitHub</a>
-            <a href="#" className="hover:text-orange-600 transition-colors">Medium</a>
+            <a href="https://www.linkedin.com/in/jeromedesmares/" className="hover:text-orange-600 transition-colors">LinkedIn</a>
+            <a href="https://medium.com/@JDesmares" className="hover:text-orange-600 transition-colors">Medium</a>
           </nav>
         </div>
       </footer>
