@@ -7,17 +7,27 @@ const structuredData = {
   "@graph": [
     {
       "@type": "ProfessionalService",
-      "name": "Jérôme - Consultant Intégration IA & MCP",
-      "description": "Expert en création de serveurs MCP privés pour connecter les LLMs aux données d'entreprise.",
+      "name": "Jérôme - Consultant Optimisation IA & Automatisation Entreprise",
+      "description": "Expert en optimisation IA pour entreprises : automatisation des processus, intégration LLM, serveurs MCP privés. Réduisez vos coûts et gagnez en productivité grâce à l'intelligence artificielle.",
       "url": "https://jeromedesmares.dev",
       "areaServed": { "@type": "Country", "name": "France" },
-      "serviceType": ["Intégration IA", "Serveur MCP", "Automatisation", "Conseil technique"]
+      "serviceType": ["Optimisation IA", "Automatisation processus", "Intégration LLM", "Serveur MCP", "Conseil IA", "Transformation digitale IA"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services IA pour entreprises",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Audit IA et identification des gains de productivité" }},
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automatisation des processus métier par IA" }},
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Intégration Claude, GPT et LLMs dans vos outils" }},
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Développement de serveurs MCP privés" }}
+        ]
+      }
     },
     {
       "@type": "Person",
       "name": "Jérôme",
-      "jobTitle": "Engineering Manager & Consultant IA",
-      "knowsAbout": ["Model Context Protocol", "TypeScript", "Node.js", "Python", "LLM", "Claude API"],
+      "jobTitle": "Consultant Optimisation IA & Engineering Manager",
+      "knowsAbout": ["Intelligence Artificielle", "Automatisation", "Optimisation processus", "Model Context Protocol", "LLM", "Claude API", "GPT", "TypeScript", "Node.js", "Python"],
       "alumniOf": { "@type": "Organization", "name": "École 42" }
     },
     {
@@ -25,13 +35,23 @@ const structuredData = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Qu'est-ce qu'un serveur MCP ?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Un serveur MCP (Model Context Protocol) permet de connecter des LLMs comme Claude ou GPT à vos données internes d'entreprise de manière sécurisée." }
+          "name": "Comment l'IA peut-elle optimiser mon entreprise ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "L'IA permet d'automatiser les tâches répétitives, d'accélérer la prise de décision et de réduire les erreurs. Les gains de productivité vont de 20% à 50% selon les processus ciblés." }
         },
         {
           "@type": "Question",
-          "name": "Pourquoi utiliser un serveur MCP privé ?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Un serveur MCP privé garde vos données dans votre infrastructure tout en permettant à l'IA d'y accéder. Vos équipes gagnent du temps en évitant le copier-coller." }
+          "name": "Quels processus peuvent être automatisés avec l'IA ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Traitement de documents, service client, analyse de données, génération de rapports, qualification de leads, gestion des emails, recherche documentaire — tous les processus répétitifs sont candidats." }
+        },
+        {
+          "@type": "Question",
+          "name": "Qu'est-ce qu'un serveur MCP ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Un serveur MCP (Model Context Protocol) permet de connecter des LLMs comme Claude ou GPT à vos données internes d'entreprise de manière sécurisée, sans exposer vos données à des tiers." }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien coûte une optimisation IA ?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Un audit initial permet d'identifier les quick wins à fort ROI. Les premiers gains sont souvent visibles en quelques semaines, avec un retour sur investissement typique de 3 à 6 mois." }
         }
       ]
     }
@@ -61,20 +81,19 @@ export default function LandingPage() {
         <section aria-labelledby="hero-title" className="px-6 py-20 md:py-32">
           <div className="max-w-4xl mx-auto text-center">
             <span className="inline-block px-4 py-1 mb-6 text-sm font-medium text-orange-700 bg-orange-100 rounded-full">
-              🚀 Expert Intégration IA & Model Context Protocol
+              🚀 Consultant Optimisation IA & Automatisation
             </span>
             <h1 id="hero-title" className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight mb-6">
-              Créez votre{' '}
               <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
-                serveur MCP privé
+                Optimisez votre entreprise
               </span>{' '}
-              et connectez l&apos;IA à vos données métier
+              grâce à l&apos;intelligence artificielle
             </h1>
             <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-              Donnez à Claude, GPT ou vos LLMs un accès sécurisé à votre CRM, ERP et documentation interne. Fini le copier-coller — vos équipes gagnent des heures chaque semaine.
+              Automatisez vos processus répétitifs, connectez l&apos;IA à vos données métier et gagnez jusqu&apos;à 50% de productivité. Audit gratuit pour identifier vos quick wins.
             </p>
             <a href="#contact" className="inline-block px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-orange-500 to-red-500 rounded-xl shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 hover:scale-105 transition-all duration-300">
-              Réserver un appel découverte gratuit →
+              Obtenir mon audit IA gratuit →
             </a>
           </div>
         </section>
@@ -82,16 +101,16 @@ export default function LandingPage() {
         <section aria-labelledby="benefits-title" className="px-6 py-20 bg-white/50">
           <div className="max-w-6xl mx-auto">
             <h2 id="benefits-title" className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">
-              Pourquoi créer un serveur MCP privé ?
+              Pourquoi optimiser vos processus avec l&apos;IA ?
             </h2>
             <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
-              Le Model Context Protocol (MCP) est le standard ouvert d&apos;Anthropic pour connecter les LLMs à vos systèmes d&apos;information.
+              L&apos;intelligence artificielle n&apos;est plus réservée aux géants tech. PME et scale-ups peuvent aujourd&apos;hui automatiser leurs tâches répétitives et gagner un avantage compétitif décisif.
             </p>
             <div className="grid md:grid-cols-3 gap-8">
               {[
-                { icon: '🔗', title: 'Connexion directe à vos outils', desc: 'Votre IA interroge votre CRM, ERP, base documentaire ou API interne en langage naturel.' },
-                { icon: '🔒', title: 'Sécurité et confidentialité', desc: 'Vos données sensibles restent dans votre infrastructure. Aucune fuite vers des APIs tierces.' },
-                { icon: '⚡', title: 'ROI mesurable immédiat', desc: 'Réduisez les tâches répétitives de 30 à 50%. Concentrez-vous sur les missions à forte valeur.' }
+                { icon: '⚡', title: 'Gagnez jusqu\'à 50% de productivité', desc: 'Automatisez le traitement de documents, la qualification de leads, les rapports — libérez vos équipes pour les tâches à forte valeur.' },
+                { icon: '🔒', title: 'Vos données restent privées', desc: 'Intégration IA dans votre infrastructure. Aucune fuite vers des APIs tierces. Conformité RGPD garantie.' },
+                { icon: '📈', title: 'ROI mesurable en semaines', desc: 'Audit initial pour identifier les quick wins. Premiers gains visibles rapidement, retour sur investissement sous 3 à 6 mois.' }
               ].map((item, i) => (
                 <article key={i} className="p-8 bg-white rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-orange-100">
                   <span className="text-4xl mb-4 block">{item.icon}</span>
@@ -121,14 +140,14 @@ export default function LandingPage() {
 
         <section aria-labelledby="services-title" className="px-6 py-20 bg-gradient-to-br from-orange-600 to-red-600">
           <div className="max-w-4xl mx-auto text-center text-white">
-            <h2 id="services-title" className="text-3xl md:text-4xl font-bold mb-4">Services d&apos;intégration IA pour entreprises</h2>
-            <p className="mb-12 text-orange-100">Solutions sur mesure pour PME, scale-ups et grands groupes</p>
+            <h2 id="services-title" className="text-3xl md:text-4xl font-bold mb-4">Solutions d&apos;optimisation IA pour votre entreprise</h2>
+            <p className="mb-12 text-orange-100">De l&apos;audit initial au déploiement — accompagnement sur mesure pour PME, scale-ups et grands groupes</p>
             <div className="grid md:grid-cols-2 gap-6">
               {[
-                { title: 'Création serveur MCP privé', desc: 'Développement complet en TypeScript ou Python. Connexion sécurisée à vos données.' },
-                { title: 'Audit et conseil IA', desc: "Identification des cas d'usage à fort ROI. Feuille de route personnalisée." },
-                { title: 'Automatisation workflows IA', desc: 'Intégration Claude API, GPT ou LLMs open source dans vos processus.' },
-                { title: 'Formation équipe technique', desc: 'Montée en compétence sur MCP, prompt engineering et architecture LLM.' }
+                { title: 'Audit IA & identification des gains', desc: 'Analyse de vos processus, identification des tâches automatisables, estimation du ROI et feuille de route personnalisée.' },
+                { title: 'Automatisation des processus métier', desc: 'Traitement de documents, emails, reporting, qualification de leads — on automatise vos tâches répétitives.' },
+                { title: 'Intégration LLM dans vos outils', desc: 'Connexion de Claude, GPT ou LLMs open source à votre CRM, ERP, documentation via serveur MCP privé.' },
+                { title: 'Formation & montée en compétence', desc: 'Formez vos équipes au prompt engineering, à l\'utilisation des outils IA et aux bonnes pratiques.' }
               ].map((s, i) => (
                 <article key={i} className="p-6 bg-white/10 backdrop-blur rounded-xl text-left hover:bg-white/20 transition-colors">
                   <h3 className="text-xl font-bold mb-2">{s.title}</h3>
@@ -141,12 +160,13 @@ export default function LandingPage() {
 
         <section aria-labelledby="faq-title" className="px-6 py-20 bg-white/30">
           <div className="max-w-3xl mx-auto">
-            <h2 id="faq-title" className="text-3xl font-bold text-center text-gray-900 mb-12">Questions fréquentes sur le MCP</h2>
+            <h2 id="faq-title" className="text-3xl font-bold text-center text-gray-900 mb-12">Questions fréquentes sur l&apos;optimisation IA</h2>
             <div className="space-y-6">
               {[
-                { q: "Qu'est-ce que le Model Context Protocol (MCP) ?", a: "Le MCP est un protocole open source créé par Anthropic permettant aux LLMs d'interagir avec des sources de données externes via une interface standardisée." },
-                { q: "Mes données sont-elles en sécurité avec un serveur MCP ?", a: "Oui. Un serveur MCP privé tourne dans votre infrastructure. Vos données ne transitent jamais par des serveurs tiers." },
-                { q: "Combien de temps pour déployer un serveur MCP ?", a: "Un POC fonctionnel peut être livré en 1 à 2 semaines. Un déploiement production complet prend 4 à 6 semaines." }
+                { q: "Quels processus peuvent être automatisés avec l'IA ?", a: "Traitement de documents et factures, réponses emails, génération de rapports, qualification de leads, recherche documentaire, support client niveau 1 — tous les processus répétitifs sont candidats." },
+                { q: "L'IA est-elle adaptée aux PME ?", a: "Absolument. Les outils IA actuels sont accessibles et rentables même pour les petites structures. Un audit initial permet d'identifier les quick wins à fort ROI pour commencer." },
+                { q: "Mes données sont-elles en sécurité ?", a: "Oui. Je privilégie les intégrations privées (serveur MCP dans votre infrastructure). Vos données ne transitent jamais par des serveurs tiers non maîtrisés." },
+                { q: "Quel est le ROI d'une optimisation IA ?", a: "Les gains de productivité vont de 20% à 50% selon les processus. Le retour sur investissement est généralement atteint en 3 à 6 mois." }
               ].map((faq, i) => (
                 <article key={i} className="p-6 bg-white rounded-xl border border-orange-100">
                   <h3 className="text-lg font-bold text-gray-900 mb-2">{faq.q}</h3>
