@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "title": "Jérôme Desmares | Tech Lead & Builder",
+    "description": "Freelance Tech Lead based in Nice, France. I help startups and SMBs build their digital products: MVP, POC, technical architecture."
+  },
+  "hero": {
+    "name": "Jérôme Desmares",
+    "tagline": "Tech Lead · Builder",
+    "description": "I turn your ideas into products. MVP, POC, technical architecture — I support startups from idea to launch.",
+    "cta": "Let's talk about your project",
+    "learnMore": "Learn more"
+  },
+  "about": {
+    "title": "My journey",
+    "subtitle": "From entrepreneur to Engineering Manager, a path driven by the passion for building impactful products.",
+    "timeline": {
+      "ecommerce": {
+        "period": "2015-2018",
+        "title": "E-commerce Entrepreneur",
+        "description": "Built and managed an online store up to €200k revenue. Discovered product, tech, and market realities."
+      },
+      "developer": {
+        "period": "2018-2020",
+        "title": "Fullstack Developer",
+        "description": "Deep dive into code within startups. APIs from scratch, critical features (payment, auth, billing)."
+      },
+      "techlead": {
+        "period": "2020-2022",
+        "title": "Tech Lead",
+        "description": "Technical leadership of teams from 3 to 6 people. Architecture, code reviews, mentoring, and complex product delivery."
+      },
+      "manager": {
+        "period": "2022-Now",
+        "title": "Engineering Manager",
+        "description": "Managing teams up to 11 people. Technical strategy, recruiting, and scaling product organizations."
+      }
+    },
+    "education": {
+      "title": "Education",
+      "school42": {
+        "name": "School 42",
+        "degree": "Digital Technologies Architect"
+      },
+      "master": {
+        "name": "Master's Degree",
+        "degree": "International Business Europe-Asia"
+      }
+    }
+  },
+  "services": {
+    "title": "What I bring",
+    "subtitle": "Solid technical expertise at the service of your product vision.",
+    "mvp": {
+      "title": "MVP & POC",
+      "description": "Validate your idea quickly with a functional product. From design to production, I build robust MVPs that let you test the market.",
+      "features": ["Fast delivery", "Production-ready code", "Scalable architecture"]
+    },
+    "architecture": {
+      "title": "Technical Architecture",
+      "description": "Design of modern and maintainable architectures. RESTful APIs, microservices, optimized databases.",
+      "features": ["Node.js / TypeScript", "PostgreSQL", "Cloud-native"]
+    },
+    "coaching": {
+      "title": "Technical Coaching",
+      "description": "Consulting and mentoring for your teams. Code reviews, best practices, and skill development.",
+      "features": ["Code reviews", "Best practices", "Pair programming"]
+    },
+    "stack": "Tech stack"
+  },
+  "contact": {
+    "title": "Let's talk about your project",
+    "subtitle": "Have a product idea? Need technical guidance? I'm available to discuss.",
+    "location": "Nice, France · Full Remote",
+    "copyright": "All rights reserved."
+  }
+}
