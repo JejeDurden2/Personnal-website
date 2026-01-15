@@ -1,45 +1,47 @@
 {
   "metadata": {
-    "title": "Jérôme Desmares | Tech Lead & Builder",
-    "description": "Freelance Tech Lead based in Nice, France. I help startups and SMBs build their digital products: MVP, POC, technical architecture."
+    "title": "Jérôme Desmares - Freelance Tech Lead | MVP Developer & Fractional CTO",
+    "description": "Freelance Tech Lead in France, Node.js & React expert. I build your MVP in 4-8 weeks. 10+ years experience, teams up to 11 devs. Free consultation.",
+    "ogTitle": "Jérôme Desmares - Freelance Tech Lead | MVP & Architecture Expert",
+    "ogDescription": "Need a fractional CTO for your startup? I turn ideas into products. MVP, POC, technical architecture. Free quote within 24h."
   },
   "hero": {
     "name": "Jérôme Desmares",
-    "tagline": "Tech Lead · Builder",
-    "description": "I turn your ideas into products. MVP, POC, technical architecture — I support startups from idea to launch.",
-    "cta": "Let's talk about your project",
-    "learnMore": "Learn more"
+    "tagline": "Freelance Tech Lead · MVP Expert",
+    "description": "I turn your ideas into profitable products. MVP in 4-8 weeks, scalable architecture, production-ready code. From idea to launch, I've got you covered.",
+    "cta": "Free quote within 24h",
+    "learnMore": "Discover my background"
   },
   "about": {
-    "title": "My journey",
-    "subtitle": "From entrepreneur to Engineering Manager, a path driven by the passion for building impactful products.",
+    "title": "10+ years building tech products",
+    "subtitle": "From e-commerce entrepreneur to Engineering Manager, I've built products generating millions in revenue for my clients.",
     "timeline": {
       "ecommerce": {
         "period": "2015-2018",
         "title": "E-commerce Entrepreneur",
-        "description": "Built and managed an online store up to €200k revenue. Discovered product, tech, and market realities."
+        "description": "Built and scaled an online store to €200k annual revenue. Customer acquisition, conversion, logistics. I learned business by doing."
       },
       "developer": {
         "period": "2018-2020",
-        "title": "Fullstack Developer",
-        "description": "Deep dive into code within startups. APIs from scratch, critical features (payment, auth, billing)."
+        "title": "Senior Fullstack Developer",
+        "description": "Built critical APIs in startups: Stripe payments, OAuth authentication, SaaS billing. Stack: Node.js, TypeScript, PostgreSQL."
       },
       "techlead": {
         "period": "2020-2022",
         "title": "Tech Lead",
-        "description": "Technical leadership of teams from 3 to 6 people. Architecture, code reviews, mentoring, and complex product delivery."
+        "description": "Technical leadership of 3-6 developer teams. Microservices architecture, CI/CD, code reviews. Delivering complex products on time."
       },
       "manager": {
         "period": "2022-Now",
-        "title": "Engineering Manager",
-        "description": "Managing teams up to 11 people. Technical strategy, recruiting, and scaling product organizations."
+        "title": "Engineering Manager / Head of Engineering",
+        "description": "Managing teams up to 11 developers. Tech recruiting, product strategy, scaling organizations. Tech budgets of several hundred k€."
       }
     },
     "education": {
       "title": "Education",
       "school42": {
-        "name": "School 42",
-        "degree": "Digital Technologies Architect"
+        "name": "School 42 Paris",
+        "degree": "Digital Technologies Architect (Master's level)"
       },
       "master": {
         "name": "Master's Degree",
@@ -48,29 +50,45 @@
     }
   },
   "services": {
-    "title": "What I bring",
-    "subtitle": "Solid technical expertise at the service of your product vision.",
+    "title": "Freelance Tech Lead Services",
+    "subtitle": "High-level technical expertise to accelerate your product growth.",
     "mvp": {
-      "title": "MVP & POC",
-      "description": "Validate your idea quickly with a functional product. From design to production, I build robust MVPs that let you test the market.",
-      "features": ["Fast delivery", "Production-ready code", "Scalable architecture"]
+      "title": "MVP / POC Development",
+      "description": "Validate your idea in 4-8 weeks with a functional product. I code your MVP from scratch with architecture built to scale. Test the market without technical risk.",
+      "features": ["4-8 weeks delivery", "Production-ready code", "Scalable architecture"]
     },
     "architecture": {
-      "title": "Technical Architecture",
-      "description": "Design of modern and maintainable architectures. RESTful APIs, microservices, optimized databases.",
-      "features": ["Node.js / TypeScript", "PostgreSQL", "Cloud-native"]
+      "title": "Architecture & Development",
+      "description": "Modern architecture design: RESTful/GraphQL APIs, microservices, event-driven. Performance optimization and technical debt reduction.",
+      "features": ["Node.js / TypeScript", "PostgreSQL / MongoDB", "AWS / GCP / Vercel"]
     },
     "coaching": {
-      "title": "Technical Coaching",
-      "description": "Consulting and mentoring for your teams. Code reviews, best practices, and skill development.",
-      "features": ["Code reviews", "Best practices", "Pair programming"]
+      "title": "Fractional CTO",
+      "description": "An experienced CTO without full-time costs. Technical direction, recruiting, code reviews, team upskilling. Available 1-4 days per week.",
+      "features": ["Technical direction", "Dev recruiting", "Team mentoring"]
     },
-    "stack": "Tech stack"
+    "stack": "Technologies I master"
   },
   "contact": {
     "title": "Let's talk about your project",
-    "subtitle": "Have a product idea? Need technical guidance? I'm available to discuss.",
-    "location": "Nice, France · Full Remote",
+    "subtitle": "MVP, technical overhaul, dev recruiting? I respond within 24h with a free initial analysis of your needs.",
+    "location": "Nice, France · 100% Remote",
+    "emailSubject": "Quote request - Tech project",
+    "emailBody": "Hi Jérôme,\n\nI'm reaching out to discuss a project.\n\nContext:\n\nNeed:\n\nDesired timeline:\n\nThanks!",
     "copyright": "All rights reserved."
+  },
+  "seo": {
+    "jsonLd": {
+      "jobTitle": "Freelance Tech Lead & Engineering Manager",
+      "description": "Freelance Tech Lead specialized in MVP development and technical consulting for startups. Expert in Node.js, TypeScript, React. Based in France, available fully remote.",
+      "knowsAbout": ["Node.js", "TypeScript", "React", "PostgreSQL", "Software Architecture", "MVP", "Startups", "Technical Management"],
+      "services": [
+        "MVP and POC Development",
+        "Technical Architecture",
+        "Fractional CTO",
+        "Fullstack Development",
+        "Technical Consulting and Mentoring"
+      ]
+    }
   }
 }

@@ -1,4 +1,4 @@
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 const socials = [
   {
@@ -32,9 +32,20 @@ const socials = [
 
 export function Contact() {
   const t = useTranslations("contact");
+  const locale = useLocale();
+
+  // Construire l'URL mailto avec les traductions
+  const emailSubject = encodeURIComponent(t("emailSubject"));
+  const emailBody = encodeURIComponent(t("emailBody"));
+  const mailtoUrl = `mailto:desmaresjerome@gmail.com?subject=${emailSubject}&body=${emailBody}`;
 
   return (
-    <section id="contact" className="relative py-24 md:py-32 px-4 md:px-6 overflow-hidden">
+    <section
+      id="contact"
+      className="relative py-24 md:py-32 px-4 md:px-6 overflow-hidden"
+      itemScope
+      itemType="https://schema.org/ContactPage"
+    >
       {/* Background Orbs */}
       <div className="absolute inset-0 -z-10">
         <div className="orb orb-1 opacity-30" />
@@ -53,14 +64,21 @@ export function Contact() {
         {/* CTA Button */}
         <div className="mt-10">
           <a
-            href="mailto:desmaresjerome@gmail.com?subject=Prise de contact - Projet&body=Bonjour Jérôme,%0D%0A%0D%0AJe souhaite discuter d'un projet avec vous.%0D%0A%0D%0A"
+            href={mailtoUrl}
             className="inline-flex items-center justify-center px-10 py-5 bg-gradient-to-r from-violet to-pink text-white text-lg font-semibold rounded-2xl shadow-lg shadow-violet/25 hover:shadow-xl hover:shadow-violet/30 hover:scale-105 transition-all duration-300 ease-out"
+            itemProp="email"
+            aria-label={
+              locale === "fr"
+                ? "Envoyer un email à desmaresjerome@gmail.com"
+                : "Send email to desmaresjerome@gmail.com"
+            }
           >
             <svg
               className="mr-3 w-6 h-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
+              aria-hidden="true"
             >
               <path
                 strokeLinecap="round"
@@ -74,12 +92,18 @@ export function Contact() {
         </div>
 
         {/* Location */}
-        <p className="mt-8 text-slate-500 flex items-center justify-center gap-2">
+        <p
+          className="mt-8 text-slate-500 flex items-center justify-center gap-2"
+          itemProp="address"
+          itemScope
+          itemType="https://schema.org/PostalAddress"
+        >
           <svg
             className="w-5 h-5"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
+            aria-hidden="true"
           >
             <path
               strokeLinecap="round"
@@ -94,30 +118,42 @@ export function Contact() {
               d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
             />
           </svg>
-          {t("location")}
+          <span itemProp="addressLocality">Nice</span>,{" "}
+          <span itemProp="addressCountry">France</span> · 100% Remote
         </p>
 
         {/* Social Links */}
-        <div className="mt-10 flex justify-center gap-4">
-          {socials.map((social) => (
-            <a
-              key={social.name}
-              href={social.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-12 h-12 flex items-center justify-center rounded-full bg-white border border-slate-200 text-slate-600 hover:text-violet hover:border-violet/30 hover:shadow-lg transition-all duration-300"
-              aria-label={social.name}
-            >
-              {social.icon}
-            </a>
-          ))}
-        </div>
+        <nav className="mt-10" aria-label="Réseaux sociaux">
+          <ul className="flex justify-center gap-4">
+            {socials.map((social) => (
+              <li key={social.name}>
+                <a
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer me"
+                  className="w-12 h-12 flex items-center justify-center rounded-full bg-white border border-slate-200 text-slate-600 hover:text-violet hover:border-violet/30 hover:shadow-lg transition-all duration-300"
+                  aria-label={`${social.name} - Jérôme Desmares`}
+                  title={social.name}
+                >
+                  {social.icon}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
 
-      {/* Footer */}
+      {/* Footer with SEO-friendly structure */}
       <footer className="mt-24 text-center text-sm text-slate-400">
         <p>
-          &copy; {new Date().getFullYear()} Jérôme Desmares. {t("copyright")}
+          &copy; {new Date().getFullYear()}{" "}
+          <span itemProp="name">Jérôme Desmares</span> -{" "}
+          <span>Tech Lead Freelance Nice</span>. {t("copyright")}
+        </p>
+        <p className="mt-2 text-xs text-slate-300">
+          {locale === "fr"
+            ? "Développeur MVP • CTO temps partagé • Architecture technique"
+            : "MVP Developer • Fractional CTO • Technical Architecture"}
         </p>
       </footer>
     </section>
