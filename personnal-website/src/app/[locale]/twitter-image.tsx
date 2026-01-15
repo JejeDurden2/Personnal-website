@@ -120,7 +120,7 @@ export default async function TwitterImage({
             zIndex: 10,
           }}
         >
-          jeromedesmares.com
+          jeromedesmares.dev
         </div>
       </div>
     ),

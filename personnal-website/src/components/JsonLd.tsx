@@ -4,7 +4,7 @@ export function JsonLd() {
   const t = useTranslations("seo.jsonLd");
   const locale = useLocale();
 
-  const baseUrl = "https://jeromedesmares.com";
+  const baseUrl = "https://jeromedesmares.dev";
   const url = locale === "fr" ? baseUrl : `${baseUrl}/en`;
 
   // Person Schema - Pour apparaître dans le Knowledge Panel Google

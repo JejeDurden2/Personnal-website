@@ -35,7 +35,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "metadata" });
 
-  const baseUrl = "https://jeromedesmares.com";
+  const baseUrl = "https://jeromedesmares.dev";
   const url = locale === "fr" ? baseUrl : `${baseUrl}/en`;
 
   // Keywords optimisés pour le marché français

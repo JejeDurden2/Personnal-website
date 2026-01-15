@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://jeromedesmares.com";
+  const baseUrl = "https://jeromedesmares.dev";
   const lastModified = new Date();
 
   // Pages principales avec leurs alternates linguistiques

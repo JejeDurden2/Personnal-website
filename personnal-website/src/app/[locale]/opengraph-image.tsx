@@ -145,7 +145,7 @@ export default async function OGImage({
             zIndex: 10,
           }}
         >
-          jeromedesmares.com
+          jeromedesmares.dev
         </div>
 
         {/* Location */}
