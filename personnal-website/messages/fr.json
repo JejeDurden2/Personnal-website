@@ -67,6 +67,11 @@
       "description": "Un CTO expérimenté sans le coût d'un CDI. Direction technique, recrutement, code reviews, montée en compétences de vos équipes. Disponible 1 à 4 jours par semaine.",
       "features": ["Direction technique", "Recrutement dev", "Mentorat équipe"]
     },
+    "ai": {
+      "title": "Conseil IA & Automatisation",
+      "description": "Intégration d'IA dans vos produits : chatbots, RAG, automatisation de workflows. Je vous aide à identifier les use cases pertinents et à les implémenter pragmatiquement.",
+      "features": ["LLMs & ChatGPT", "RAG & embeddings", "Automatisation"]
+    },
     "stack": "Technologies maîtrisées"
   },
   "contact": {
@@ -81,13 +86,14 @@
     "jsonLd": {
       "jobTitle": "Tech Lead Freelance & Engineering Manager",
       "description": "Tech Lead freelance spécialisé dans la création de MVP et l'accompagnement technique de startups. Expert Node.js, TypeScript, React. Basé à Nice, disponible en full remote.",
-      "knowsAbout": ["Node.js", "TypeScript", "React", "PostgreSQL", "Architecture logicielle", "MVP", "Startups", "Management technique"],
+      "knowsAbout": ["Node.js", "TypeScript", "React", "PostgreSQL", "Architecture logicielle", "MVP", "Startups", "Management technique", "Intelligence Artificielle", "LLM"],
       "services": [
         "Création de MVP et POC",
         "Architecture technique",
         "CTO à temps partagé",
         "Développement fullstack",
-        "Conseil et mentorat technique"
+        "Conseil et mentorat technique",
+        "Conseil IA et automatisation"
       ]
     }
   }

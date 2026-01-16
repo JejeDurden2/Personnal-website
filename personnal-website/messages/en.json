@@ -67,6 +67,11 @@
       "description": "An experienced CTO without full-time costs. Technical direction, recruiting, code reviews, team upskilling. Available 1-4 days per week.",
       "features": ["Technical direction", "Dev recruiting", "Team mentoring"]
     },
+    "ai": {
+      "title": "AI Consulting & Automation",
+      "description": "AI integration in your products: chatbots, RAG, workflow automation. I help you identify relevant use cases and implement them pragmatically.",
+      "features": ["LLMs & ChatGPT", "RAG & embeddings", "Automation"]
+    },
     "stack": "Technologies I master"
   },
   "contact": {
@@ -81,13 +86,14 @@
     "jsonLd": {
       "jobTitle": "Freelance Tech Lead & Engineering Manager",
       "description": "Freelance Tech Lead specialized in MVP development and technical consulting for startups. Expert in Node.js, TypeScript, React. Based in France, available fully remote.",
-      "knowsAbout": ["Node.js", "TypeScript", "React", "PostgreSQL", "Software Architecture", "MVP", "Startups", "Technical Management"],
+      "knowsAbout": ["Node.js", "TypeScript", "React", "PostgreSQL", "Software Architecture", "MVP", "Startups", "Technical Management", "Artificial Intelligence", "LLM"],
       "services": [
         "MVP and POC Development",
         "Technical Architecture",
         "Fractional CTO",
         "Fullstack Development",
-        "Technical Consulting and Mentoring"
+        "Technical Consulting and Mentoring",
+        "AI Consulting and Automation"
       ]
     }
   }
