@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { routing } from "@/i18n/routing";
 import { locales, type Locale } from "@/i18n/config";
 import { JsonLd } from "@/components/JsonLd";
@@ -223,6 +225,8 @@ export default async function LocaleLayout({ children, params }: Props) {
           <JsonLd />
           {children}
         </NextIntlClientProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
